@@ -3,6 +3,7 @@ import 'package:portfolio/constants/colors.dart';
 import 'package:portfolio/constants/strings.dart';
 import 'package:portfolio/constants/text_styles.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:portfolio/portfolio/widgets/navbar/navigationbar.dart';
 
 class DesktopHomePage extends StatefulWidget {
   const DesktopHomePage({Key? key}) : super(key: key);
@@ -18,10 +19,14 @@ class _DesktopHomePage extends State<DesktopHomePage> {
       color: Pallete.darkgrey,
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        body: LayoutBuilder(
+        body: 
+        LayoutBuilder(
           builder: (context, constraints) {
             return Stack(
-              children: <Widget>[_buildSocialButtons()],
+              children: <Widget>[
+                const NavBar(),
+                _buildSocialButtons()
+                ],
             );
           },
         ),
@@ -30,7 +35,7 @@ class _DesktopHomePage extends State<DesktopHomePage> {
   }
 }
 
-// general widgets
+// general widgets only used for portfolio page
 Widget _buildSocialButtons({
   int quarterTurns = 3,
   Axis axis = Axis.vertical,
@@ -60,7 +65,7 @@ Widget _buildMenuItem(int quarterTurns, String link, String title) {
   return RotatedBox(
     quarterTurns: quarterTurns,
     child: MaterialButton(
-      hoverColor: const Color(0xFF00bcd5),
+      hoverColor: Pallete.babyblue,
       onPressed: () {
         _launchURL(link);
       },

@@ -13,7 +13,7 @@ class Strings {
 
   // intro
   static const String hello = 'Hello';
-  static const String iamvoit = '\nI am\nZubair';
+  static const String iamvoit = '\nI am\nPascal';
   static const String design = 'DES_\nIGN';
   static const String gamedev = 'Gamedesigner and Developer';
 
@@ -22,9 +22,9 @@ class Strings {
   static const String about = 'Ab_\nout';
   static const String me = ' Me';
   static const String headline =
-      'I\'am Zubair Rehman, Mobile App Developer from Islamabad, Pakistan';
+      'I\'am Pascal Dohle, Game  Designer & Developer from Germany';
   static const String summary =
-      'Focused professional having excellent technical and communication skills, and offering 6 years of experience in Computer industry. Proficient at designing and formulating test automation frameworks, writing code in various languages, feature development and implementation. Specialize in thinking outside the box to find unique solutions to difficult engineering problems.';
+      'Focused and ... student, interested in all facades of game development. Proficient at designing new and already existing systems, to optimize the players experience through environemnt art, leveldesign and game mechanics. I\' am always trying to think outside the box to find unique solutions to different design choices or engineering problems.';
 
   // skills
   static const String skills = 'Sk_\nills';
@@ -34,28 +34,27 @@ class Strings {
 
   static final skillsList = [
     'C#',
+    'C++',
+    'Rust',
+    'Flutter',
     'Unreal Engine',
     'Unity',
     'Photoshop',
     'Blender',
-    'C++',
     'Quixel Mixer',
-    'Photoshop',
-    'Jenkins',
-    'Photoshop',
-    'JFrog Atrtifactory',
-    'Code Magic',
+    'After Effects',
+    'Premiere Pro',
   ];
 
   static final educationList = [
     Education(
-      'Apr 2021',
+      'Okt 2021',
       'Present',
       'Macromedia University',
       'B.A. Gamedesign & Development',
     ),
     Education(
-      'Apr 2018',
+      'Sept 2018',
       'Apr 2021',
       'Otto-Hahn Gymnasium',
       'High School Diploma',
@@ -68,19 +67,17 @@ class Strings {
       'I\'m always interested about cool stuff. Are you minding a project?\n';
   static const String letsTalk = 'Let\'s talk.';
 
-  // menu items
+  // sidebar menu items
   static const String menuArtstation = 'ARTSTATION';
   static const String menuLinkedin = 'LINKEDIN';
   static const String menuDiscord = 'DISCORD';
   static const String menuGithub = 'GITHUB';
   static const String menuMail = 'MAIL';
 
-  // links
+  //sidebar menu links
   static const String menuArtstationLink = 'https://www.artstation.com/iamvoit';
-  static const String menuLinkedinLink =
-      'https://www.linkedin.com/in/pascal-dohle-a44531294/';
-  static const String menuDiscordLink =
-      'https://discord.com/users/366624374557769728';
+  static const String menuLinkedinLink = 'https://www.linkedin.com/in/pascal-dohle-a44531294/';
+  static const String menuDiscordLink = 'https://discord.com/users/366624374557769728';
   static const String menuGithubLink = 'https://github.com/byIamVoit';
   static const String menuMailLink = 'pascal-dohle@gmx.de';
 }

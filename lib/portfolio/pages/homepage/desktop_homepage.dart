@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/colors.dart';
-import 'package:portfolio/constants/strings.dart';
 import 'package:portfolio/constants/text_styles.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:portfolio/portfolio/widgets/navbar/navigationbar.dart';
+import 'package:portfolio/portfolio/widgets/navigationbar.dart';
+import 'package:portfolio/portfolio/widgets/sozials_buttons.dart';
+import 'package:portfolio/sharedwidgets/centeredview.dart';
 
 class DesktopHomePage extends StatefulWidget {
-  const DesktopHomePage({Key? key}) : super(key: key);
+  const DesktopHomePage({super.key});
 
   @override
   State<DesktopHomePage> createState() => _DesktopHomePage();
@@ -15,83 +15,152 @@ class DesktopHomePage extends StatefulWidget {
 class _DesktopHomePage extends State<DesktopHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: Pallete.darkgrey,
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: 
-        LayoutBuilder(
+    var key0 = GlobalKey();
+    var key1 = GlobalKey();
+    var key2 = GlobalKey();
+    var key3 = GlobalKey();
+
+    return Scaffold(
+        backgroundColor: Pallete.darkgrey,
+        body: LayoutBuilder(
           builder: (context, constraints) {
             return Stack(
               children: <Widget>[
-                const NavBar(),
-                _buildSocialButtons()
-                ],
+                SingleChildScrollView(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      //
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        key: key0,
+                        children: <Widget>[
+                          SizedBox(
+                            width: 80,
+                            height: 80,
+                          ),
+                          Row(
+                            children: <Widget>[
+                              Container(
+                                alignment: Alignment.center,
+                                height: 700,
+                                width: 850,
+                                child: Column(
+                                  children: [
+                                    SizedBox(
+                                      height: 200,
+                                    ),
+                                    Container(
+                                      height: 400,
+                                      width: 850,
+                                      child: Row(
+                                        children: [
+                                          SizedBox(
+                                            width: 150,
+                                          ),
+                                          Column(children: [
+                                            Align(
+                                              alignment: Alignment.centerLeft,
+                                              child: Container(
+                                                child: Text(
+                                                    "HEY I'M PASCAL DOHLE",
+                                                    style: CustomStyle
+                                                        .heroHeading),
+                                              ),
+                                            ),
+                                            Align(
+                                              alignment: Alignment.centerLeft,
+                                              child: Text(
+                                                  "THE GAMEDESIGNER AND DEVELOPER BEHIND VOITNOTES",
+                                                  style: CustomStyle.herotext),
+                                            ),
+                                            Align(
+                                              alignment: Alignment.centerLeft,
+                                              child: Text(
+                                                  "Creating Games feels like magic, because you can create your own world from nearly" +
+                                                      '\n\n' +
+                                                      "nothing and the only thing holding you back is your owen imaginations",
+                                                  style:
+                                                      CustomStyle.herospeech),
+                                            ),
+                                          ])
+                                        ],
+                                      ),
+                                    ),
+                                    Container(),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                alignment: Alignment.center,
+                                width: 400,
+                                child: Image.asset(
+                                    'assets/images/portfolio/sketchofme.png'),
+                              ),
+                              SizedBox(
+                                width: 50,
+                                height: 80,
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                      //
+                      Container(
+                        key: key1,
+                        color: Pallete.darkgrey,
+                        height: MediaQuery.of(context).size.height,
+                        child: Center(
+                            child: ElevatedButton(
+                                onPressed: () {
+                                  Scrollable.ensureVisible(key1.currentContext!,
+                                      curve: Curves.decelerate,
+                                      duration: Durations.medium1);
+                                },
+                                child: Text('Scroll Down'))),
+                      ),
+                      //
+                      Container(
+                        key: key2,
+                        color: Pallete.darkgrey,
+                        height: MediaQuery.of(context).size.height,
+                        child: Center(
+                            child: ElevatedButton(
+                                onPressed: () {
+                                  Scrollable.ensureVisible(key2.currentContext!,
+                                      curve: Curves.decelerate,
+                                      duration: Durations.medium1);
+                                },
+                                child: Text('Scroll Down'))),
+                      ),
+                      //
+                      Container(
+                        key: key3,
+                        color: Pallete.darkgrey,
+                        height: MediaQuery.of(context).size.height,
+                        child: Center(
+                            child: ElevatedButton(
+                                onPressed: () {
+                                  Scrollable.ensureVisible(key2.currentContext!,
+                                      curve: Curves.decelerate,
+                                      duration: Durations.medium1);
+                                },
+                                child: Text('Scroll Down'))),
+                      ),
+                    ],
+                  ),
+                ),
+                CenteredView(
+                    child: NavBar(
+                  key0: key0,
+                  key1: key1,
+                  key2: key2,
+                  key3: key3,
+                )),
+                BuildSozialButtons(),
+              ],
             );
           },
-        ),
-      ),
-    );
-  }
-}
-
-// general widgets only used for portfolio page
-Widget _buildSocialButtons({
-  int quarterTurns = 3,
-  Axis axis = Axis.vertical,
-  alignment = Alignment.centerRight,
-}) {
-  return Align(
-    alignment: alignment,
-    child: Wrap(
-      crossAxisAlignment: WrapCrossAlignment.center,
-      direction: axis,
-      children: <Widget>[
-        _buildMenuItem(
-            quarterTurns, Strings.menuLinkedinLink, Strings.menuLinkedin),
-        _buildMenuItem(
-            quarterTurns, Strings.menuArtstationLink, Strings.menuArtstation),
-        _buildMenuItem(
-            quarterTurns, Strings.menuGithubLink, Strings.menuGithub),
-        _buildMenuItem(
-            quarterTurns, Strings.menuDiscordLink, Strings.menuDiscord),
-        _buildMenuItem(quarterTurns, Strings.menuMailLink, Strings.menuMail),
-      ],
-    ),
-  );
-}
-
-Widget _buildMenuItem(int quarterTurns, String link, String title) {
-  return RotatedBox(
-    quarterTurns: quarterTurns,
-    child: MaterialButton(
-      hoverColor: Pallete.babyblue,
-      onPressed: () {
-        _launchURL(link);
-      },
-      child: Text(
-        title,
-        style: CustomStyle.menuItem,
-      ),
-    ),
-  );
-}
-
-_launchURL(String link) async {
-  String atSign = '@';
-  if (link.contains(atSign)) {
-    final Uri params = Uri(scheme: 'mailto', path: link);
-    var url = params.toString();
-    if (await canLaunchUrl(Uri.parse(url))) {
-      await launchUrl(Uri.parse(url));
-    } else {
-      throw 'Could not launch $url';
-    }
-  } else {
-    if (await canLaunchUrl(Uri.parse(link))) {
-      await launchUrl(Uri.parse(link));
-    } else {
-      throw 'Could not launch $link';
-    }
+        ));
   }
 }

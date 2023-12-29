@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MobileAboutMe extends StatefulWidget {
-  const MobileAboutMe({Key? key}) : super(key: key);
+  const MobileAboutMe({super.key});
 
   @override
   State<MobileAboutMe> createState() => _MobileAboutMe();

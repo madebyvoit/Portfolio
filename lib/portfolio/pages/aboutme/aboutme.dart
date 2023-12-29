@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/constants/responsivelayer.dart';
+import 'package:portfolio/sharedwidgets/responsivelayer.dart';
 import 'package:portfolio/portfolio/pages/aboutme/dekstop_aboutme.dart';
 import 'package:portfolio/portfolio/pages/aboutme/mobile_aboutme.dart';
 
 class AboutMe extends StatefulWidget {
-  const AboutMe({Key? key}) : super(key: key);
+  const AboutMe({super.key});
 
   @override
   State<AboutMe> createState() => _AboutMe();

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DesktopAboutMe extends StatefulWidget {
-  const DesktopAboutMe({Key? key}) : super(key: key);
+  const DesktopAboutMe({super.key});
 
   @override
   State<DesktopAboutMe> createState() => _DesktopAboutMe();

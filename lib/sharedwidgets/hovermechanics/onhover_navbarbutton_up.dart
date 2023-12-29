@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 class NavbarButtonUp extends StatefulWidget {
   final Widget Function(bool isHovered) builder;
 
-  const NavbarButtonUp({Key? key, required this.builder}) : super(key: key);
+  const NavbarButtonUp({super.key, required this.builder});
 
   @override
-  _NavbarButtonUpState createState() => _NavbarButtonUpState();
+  State<NavbarButtonUp> createState() => _NavbarButtonUpState();
 }
 
 class _NavbarButtonUpState extends State<NavbarButtonUp> {
@@ -23,7 +23,7 @@ class _NavbarButtonUpState extends State<NavbarButtonUp> {
       onExit: (event) => onEntered(false),
       child: AnimatedContainer(
         curve: Curves.decelerate,
-        duration: Duration(milliseconds: 200),
+        duration: const Duration(milliseconds: 200),
         transform: transform,
         child: widget.builder(isHovered),
       ),

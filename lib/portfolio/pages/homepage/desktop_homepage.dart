@@ -38,28 +38,28 @@ class _DesktopHomePage extends State<DesktopHomePage> {
                         key: key0,
                         color: Pallete.darkgrey,
                         height: MediaQuery.of(context).size.height,
-                        child: HeroSection(),
+                        child: const HeroSection(),
                       ),
                       //AboutSection
                       Container(
                         key: key1,
                         color: Pallete.darkgrey,
                         height: MediaQuery.of(context).size.height,
-                        child: AboutMe(),
+                        child: const AboutMe(),
                       ),
                       //ServiceSection
                       Container(
                         key: key2,
                         color: Pallete.darkgrey,
                         height: MediaQuery.of(context).size.height,
-                        child: Services(),
+                        child: const Services(),
                       ),
                       //Let's Talk Section
                       Container(
                         key: key3,
                         color: Pallete.darkgrey,
                         height: MediaQuery.of(context).size.height,
-                        child: LetsTalk(),
+                        child: const LetsTalk(),
                       ),
                     ],
                   ),
@@ -71,7 +71,7 @@ class _DesktopHomePage extends State<DesktopHomePage> {
                   key2: key2,
                   key3: key3,
                 )),
-                BuildSozialButtons(),
+                const BuildSozialButtons(),
               ],
             );
           },

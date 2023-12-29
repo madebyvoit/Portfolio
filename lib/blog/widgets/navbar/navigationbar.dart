@@ -26,19 +26,19 @@ class BlogNavBar extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               _NavbarItem('about', key1, true),
-              SizedBox(
+              const SizedBox(
                 width: 60,
               ),
               _NavbarItem('services', key1, true),
-              SizedBox(
+              const SizedBox(
                 width: 60,
               ),
               _NavbarItem('Portfolio', key1, false),
-              SizedBox(
+              const SizedBox(
                 width: 60,
               ),
               _NavbarItem('Latest Post', key3, true),
-              SizedBox(
+              const SizedBox(
                 width: 60,
               ),
             ],
@@ -68,7 +68,7 @@ class _NavbarItem extends StatelessWidget {
                                       duration: Durations.medium1);
           }else
           {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) => DesktopHomePage()));
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => const DesktopHomePage()));
           }
         },
         child: Text(

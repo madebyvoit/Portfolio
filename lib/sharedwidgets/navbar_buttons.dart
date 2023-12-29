@@ -13,7 +13,7 @@ class NavbarButtons extends StatelessWidget {
   final double height;
   final Function cmd;
   const NavbarButtons(
-      {Key? key,
+      {super.key,
       required this.title,
       required this.normalStyle,
       required this.hoverStyle,
@@ -22,8 +22,7 @@ class NavbarButtons extends StatelessWidget {
       required this.fillColor,
       required this.width,
       required this.height,
-      required this.cmd})
-      : super(key: key);
+      required this.cmd});
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +49,7 @@ class NavbarButtons extends StatelessWidget {
                     borderRadius: BorderRadius.circular(22.0)),
                 color: isHovered ? normalColor : fillColor,
                 onPressed: () {
-                  this.cmd();
+                  cmd();
                 },
                 child: Text(
                   title,

@@ -44,7 +44,7 @@ class NavBar extends StatelessWidget {
                     Scrollable.ensureVisible(key1.currentContext!,
                         curve: Curves.decelerate, duration: Durations.long1);
                   }),
-              SizedBox(
+              const SizedBox(
                 width: 50,
               ),
               NavbarButtons(
@@ -60,7 +60,7 @@ class NavBar extends StatelessWidget {
                     Scrollable.ensureVisible(key2.currentContext!,
                         curve: Curves.decelerate, duration: Durations.long1);
                   }),
-              SizedBox(
+              const SizedBox(
                 width: 50,
               ),
               NavbarButtons(
@@ -74,9 +74,9 @@ class NavBar extends StatelessWidget {
                   height: 42,
                   cmd: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => BlogDesktopHomePage()));
+                        builder: (context) => const BlogDesktopHomePage()));
                   }),
-              SizedBox(
+              const SizedBox(
                 width: 50,
               ),
               NavbarButtons(
@@ -92,7 +92,7 @@ class NavBar extends StatelessWidget {
                     Scrollable.ensureVisible(key3.currentContext!,
                         curve: Curves.decelerate, duration: Durations.long1);
                   }),
-              SizedBox(
+              const SizedBox(
                 width: 60,
               ),
             ],

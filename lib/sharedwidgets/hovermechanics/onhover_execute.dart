@@ -4,11 +4,10 @@ class HoverExecute extends StatefulWidget {
   final bool hovered;
   final Widget child;
 
-  const HoverExecute({Key? key, required this.hovered, required this.child})
-      : super(key: key);
+  const HoverExecute({super.key, required this.hovered, required this.child});
 
   @override
-  _HoverExecuteState createState() => _HoverExecuteState();
+  State<HoverExecute> createState() => _HoverExecuteState();   
 }
 
 class _HoverExecuteState extends State<HoverExecute> {
@@ -26,7 +25,7 @@ class _HoverExecuteState extends State<HoverExecute> {
       onExit: (event) => onEntered(false),
       child: AnimatedContainer(
         curve: Curves.decelerate,
-        duration: Duration(milliseconds: 200),
+        duration: const Duration(milliseconds: 200),
         transform: transform,
         child: widget.child,
       ),

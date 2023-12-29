@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 class OnHoverScale extends StatefulWidget {
   final Widget child;
 
-  const OnHoverScale({Key? key, required this.child}) : super(key: key);
+  const OnHoverScale({super.key, required this.child});
 
   @override
-  _OnHoverScaleState createState() => _OnHoverScaleState();
+  State<OnHoverScale> createState() => _OnHoverScaleState();
 }
 
 class _OnHoverScaleState extends State<OnHoverScale> {
@@ -20,7 +20,7 @@ class _OnHoverScaleState extends State<OnHoverScale> {
       onEnter: (event) => onEntered(true),
       onExit: (event) => onEntered(false),
       child: AnimatedContainer(
-        duration: Duration(milliseconds: 200),
+        duration: const Duration(milliseconds: 200),
         transform: transform,
         child: widget.child,
       ),

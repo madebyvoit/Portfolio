@@ -40,7 +40,7 @@ class _BlogDesktopHomePage extends State<BlogDesktopHomePage> {
                                       curve: Curves.decelerate,
                                       duration: Durations.medium1);
                                 },
-                                child: Text('blogpage Down'))),
+                                child: const Text('blogpage Down'))),
                       ),
                       //
                       Container(
@@ -55,7 +55,7 @@ class _BlogDesktopHomePage extends State<BlogDesktopHomePage> {
                                       curve: Curves.decelerate,
                                       duration: Durations.medium1);
                                 },
-                                child: Text('Scroll Down'))),
+                                child: const Text('Scroll Down'))),
                       ), 
                       //
                       Container(
@@ -70,7 +70,7 @@ class _BlogDesktopHomePage extends State<BlogDesktopHomePage> {
                                       curve: Curves.decelerate,
                                       duration: Durations.medium1);
                                 },
-                                child: Text('Scroll Down'))),
+                                child: const Text('Scroll Down'))),
                       )
                     ],
                   ),

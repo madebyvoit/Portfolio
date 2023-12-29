@@ -33,7 +33,7 @@ Widget _buildSocialButtons({
         _buildMenuItem(
             quarterTurns, Strings.menuDiscordLink, Strings.menuDiscord),
         _buildMenuItem(quarterTurns, Strings.menuMailLink, Strings.menuMail),
-        SizedBox(
+        const SizedBox(
           width: 55,
         ),
       ],

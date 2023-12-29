@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 class OnHoverCheck extends StatefulWidget {
   final Widget Function(bool isHovered) builder;
 
-  const OnHoverCheck({Key? key, required this.builder}) : super(key: key);
+  const OnHoverCheck({super.key, required this.builder});
 
   @override
-  _OnHoverCheckState createState() => _OnHoverCheckState();
+  State<OnHoverCheck> createState() => _OnHoverCheckState();
 }
 
 class _OnHoverCheckState extends State<OnHoverCheck> {

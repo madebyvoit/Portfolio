@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/sharedwidgets/centeredview.dart';
 
 class HeroSection extends StatelessWidget {
-  const HeroSection({Key? key}) : super(key: key);
+  const HeroSection({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       //put background image here
       height: MediaQuery.of(context).size.height,
       child: CenteredView(
         child: Container(
-          margin: new EdgeInsets.symmetric(horizontal: 200),
+          margin: const EdgeInsets.only(top: 60),
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
-          color: Colors.blue,
+          color: Colors.red,
         ),
       ),
     );

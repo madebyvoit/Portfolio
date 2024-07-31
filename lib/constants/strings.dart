@@ -1,4 +1,3 @@
-import 'package:portfolio/portfolio/models/education.dart';
 
 class Strings {
   Strings._();
@@ -46,20 +45,6 @@ class Strings {
     'Premiere Pro',
   ];
 
-  static final educationList = [
-    Education(
-      'Okt 2021',
-      'Present',
-      'Macromedia University',
-      'B.A. Gamedesign & Development',
-    ),
-    Education(
-      'Sept 2018',
-      'Apr 2021',
-      'Otto-Hahn Gymnasium',
-      'High School Diploma',
-    ),
-  ];
 
   // hire
   static const String hire = 'HIRE';

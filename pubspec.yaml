@@ -44,9 +44,7 @@ flutter:
 
   # Images and other assets
   assets:
-    - assets/images/portfolio/logo.png
-    - assets/cv/curriculum_vitae-Pascal Dohle.pdf
-    - assets/images/portfolio/sketchofme.png
+    - assets/images/shared/
 
   # Custom Fonts
   fonts:

@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/portfolio/pages/homepage/homepage.dart';
+import 'package:portfolio/pages/homepage/homepage.dart';
 
 void main() {
-  runApp(const Main());
+  runApp(const MainApp());
 }
 
-class Main extends StatelessWidget {
-  const Main({super.key});
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'VoitNotes ☁️',
       home: HomePage(),
     );
   }

@@ -7,7 +7,7 @@ const double lineHeight = 4;
 Color defaultLineColor = AppColors.loadingLineColor;
 
 class LoadingHomePageAnimation extends StatefulWidget {
-  static const String loadingPageRoute = StringConst.loadingPage;
+  static const String loadingPageRoute = Strings.loadingPage;
   const LoadingHomePageAnimation({
     super.key,
     required this.text,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/pages/homepage/homepage.dart';
+import 'package:portfolio/constants/values/values.dart';
+import 'package:portfolio/route/routes.dart';
+import 'package:portfolio/utils/scrollbehaviour/custom_scrollbehaviour.dart';
 
 void main() {
   runApp(const MainApp());
@@ -10,9 +12,11 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp.router(
+      title: Strings.appName,
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      scrollBehavior: AppScrollBehavior(),
+      routerConfig: Routes.router,
     );
   }
 }

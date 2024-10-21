@@ -1,6 +1,6 @@
 part of 'values.dart';
 
-class StringConst {
+class Strings {
   //strings
   static const String appName = "Pascal Dohle Portfolio";
   static const String appTitle = "Pascal Dohle Portfolio";

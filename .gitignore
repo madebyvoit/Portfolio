@@ -29,7 +29,11 @@ migrate_working_dir/
 .flutter-plugins-dependencies
 .pub-cache/
 .pub/
-/build/
+
+#include only the flutter web build
+!build/
+
+build/*
 !/build/web/
 
 # Symbolication related

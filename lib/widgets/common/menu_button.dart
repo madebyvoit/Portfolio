@@ -1,0 +1,47 @@
+import 'dart:math';
+
+import 'package:flutter/material.dart';
+import 'package:portfolio/utils/extensions/extensions.dart';
+import 'package:portfolio/data/configs/configs.dart';
+
+class MenuButton extends StatelessWidget {
+  const MenuButton({
+    super.key,
+    required this.onPressed,
+    this.hasMenuTapped = false,
+  });
+  final VoidCallback onPressed;
+  final bool hasMenuTapped;
+  @override
+  Widget build(BuildContext context) {
+    double size = context.adaptive<double>(
+      s30,
+      s65,
+      md: s40,
+    );
+    double difference = context.adaptive<double>(
+      s5,
+      s20,
+      md: s10,
+    );
+    return Transform(
+      alignment: Alignment.center,
+      transform: Matrix4.rotationY(pi),
+      child: InkWell(
+        onTap: onPressed,
+        borderRadius: BorderRadius.circular(s50),
+        child: Icon(
+          hasMenuTapped ? Icons.edit_square : Icons.square,
+          size: size - difference,
+          color: kBlack,
+        ).addCenter().addContainer(
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+              ),
+              width: size,
+              height: size,
+            ),
+      ),
+    );
+  }
+}

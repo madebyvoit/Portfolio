@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/constants/values/values.dart';
+import 'package:layout/layout.dart';
 import 'package:portfolio/route/routes.dart';
-import 'package:portfolio/utils/scrollbehaviour/custom_scrollbehaviour.dart';
+import 'package:portfolio/utils/custom_scroll_behaviour.dart';
+import 'package:portfolio/utils/extensions/theme_ex.dart';
 
-void main() {
+void main() async {
   runApp(const MainApp());
 }
 
@@ -12,11 +13,17 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      title: Strings.appName,
-      debugShowCheckedModeBanner: false,
-      scrollBehavior: AppScrollBehavior(),
-      routerConfig: Routes.router,
+    return Layout(
+      child: MaterialApp(
+        title: 'Pascal Dohle Portfolio',
+        scrollBehavior: AppScrollBehavior(),
+        debugShowCheckedModeBanner: false,
+        theme: context.theme(),
+        initialRoute: initialRoute,
+        onGenerateRoute: RouteGen.generateRoute,
+      ),
     );
   }
+
+  String get initialRoute => Routes.home;
 }

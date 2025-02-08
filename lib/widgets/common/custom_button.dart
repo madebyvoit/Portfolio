@@ -7,7 +7,7 @@ class CustomButton extends StatefulWidget {
     super.key,
     required this.label,
     this.bgColor = kWhite,
-    this.foregroundColor = kBlack,
+    this.foregroundColor = Colors.white,
     this.shadowColor,
     required this.onPressed,
     required this.icon,
@@ -51,13 +51,13 @@ class _CustomButtonState extends State<CustomButton> {
               Text(
                 widget.label.toUpperCase(),
                 style: labelStyle?.copyWith(
-                  color: widget.shadowColor ?? kSecondary,
+                  color: widget.shadowColor ?? AppColors.darkPrimaryContainer,
                 ),
               ),
               customSpace(w: _isHovered ? s10 : s5),
               Icon(
                 widget.icon,
-                color: widget.shadowColor ?? kSecondary,
+                color: widget.shadowColor ?? AppColors.darkPrimaryContainer,
               ),
             ].addRow().addCenter().addContainer(
                   padding: EdgeInsets.symmetric(
@@ -65,9 +65,10 @@ class _CustomButtonState extends State<CustomButton> {
                     horizontal: context.adaptive(s24, s42),
                   ),
                   decoration: BoxDecoration(
-                    color: widget.shadowColor ?? kSecondary,
+                    color: widget.shadowColor ?? AppColors.darkPrimaryContainer,
+                    borderRadius: BorderRadius.circular(10),
                     border: Border.all(
-                      color: widget.shadowColor ?? kSecondary,
+                      color: widget.shadowColor ?? AppColors.darkPrimaryContainer,
                     ),
                   ),
                 ),
@@ -92,6 +93,7 @@ class _CustomButtonState extends State<CustomButton> {
                   horizontal: context.adaptive(s24, s42),
                 ),
                 decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
                   border: Border.all(
                     color: widget.foregroundColor,
                   ),

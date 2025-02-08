@@ -71,19 +71,19 @@ class AppColors {
 
 
   //* dark Theme
-  static const Color darkPrimary = Color(0xFF01030D);
-  static const Color darkPrimaryContainer = Color(0xFF091C22);
-  static const Color darkSecondary = Color(0xFF032221);
-  static const Color darkSecondaryContainer = Color(0xff526d82);
+  static const Color darkPrimary = Color(0xFF121212); //Antrazitgrau
+  static const Color darkPrimaryContainer = Color(0xFF2A5D47); //Dark Forest Green
+  static const Color darkSecondary = Color(0xFF1E2A23); //Olive grau
+  static const Color darkSecondaryContainer = Color(0xFF5DA36B); //Smaraggrau
   static const Color darkBackground = Color(0xFF01030D);
 
-  static const Color darkOnPrimary = Color(0xffdde6ed);
-  static const Color darkOnPrimaryContainer = Color(0xFFF1F7F6);
-  static const Color darkOnSecondary = Color(0xff9db2bf);
-  static const Color darkOnSecondaryContainer = Color(0xff526d82);
-  static const Color darkOnBackground = Color(0xFF091C22);
+  static const Color darkOnPrimary = Color(0xFFEAEAEA);
+  static const Color darkOnPrimaryContainer = Color(0xFFEAEAEA);
+  static const Color darkOnSecondary = Color(0xFFEAEAEA);
+  static const Color darkOnSecondaryContainer = Color(0xFF121212);
+  static const Color darkOnBackground = Color(0xFFEAEAEA);
 
-  static const Color darkHighlight = Color(0xFFF9F9F9);
+  static const Color darkHighlight = Color(0xFFEAEAEA);
   static const Color darkFocus = Color(0xFF376A37);
 
   static const Color darkError = Color(0xffcc2936);
@@ -95,6 +95,6 @@ class AppColors {
   static const Color darkAppBarBackground = Color(0xFFF9F9F9);
 
   //*custom Colors
-  static const Color loadingLineColor = Color(0xFFF1F7F6);
-  static const Color loadingBackground = Color(0xFF01030D);
+  static const Color loadingLineColor = Color(0xFFEAEAEA);
+  static const Color loadingBackground = Color(0xFF121212);
 }

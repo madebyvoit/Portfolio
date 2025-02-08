@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/utils/extensions/extensions.dart';
 
-/// credit to [https://davidcobbina.com] for his amazing artwork 👏🏻👏🏻
 const double hiddenFactor = 2.0;
 
 class AnimatedSlideBox extends AnimatedWidget {

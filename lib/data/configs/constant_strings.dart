@@ -75,7 +75,7 @@ const String ksJuliusGWebsite =
     "https://www.behance.net/gallery/63574251/Personal-Portfolio-Website-Design";
 const String ksBuildUsing = "Build using ";
 const String ksWithMuch = " with much ";
-const String ksCC = "©️2024 Pascal Dohle / Voit";
+const String ksCC = "©️2025 Pascal Dohle / Voit";
 const String ksYoung = "When I was young, I was a kid!";
 const String ksNobody = "I'm NOBODY";
 const String ksSpecialization =
@@ -100,15 +100,21 @@ final List<String> ksMobileTech = ['Flutter', 'Dart'];
 final List<String> ksWebTech = [
   'HTML',
   'CSS',
-  'Three Js',
-  'C',
-  'Java',
+  'Javascript',
+  'Dart',
+  'Flutter',
 ];
 final List<String> ksOtherTech = [
-  'Firebase',
-  'GraphQL',
-  'Appwrite',
-  'MongoDB',
+  'C#',
+  'C++',
+  'Rust',
+  'SQL',
+  'Python',
+];
+final List<String> ksSkills = [
+  'Tech Art',
+  '',
+  'Rust',
   'SQL',
   'Python',
 ];

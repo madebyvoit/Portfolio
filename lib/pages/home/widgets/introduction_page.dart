@@ -88,7 +88,7 @@ class _IntroductionPageState extends State<IntroductionPage>
                   offset: Offset(s0, s0),
                   blurRadius: s50,
                   spreadRadius: s05,
-                  color: kSecondary,
+                  color: Colors.red,
                   blurStyle: BlurStyle.outer,
                 ),
               ],

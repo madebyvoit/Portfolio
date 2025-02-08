@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/utils/theme_provider.dart';
+import 'package:provider/provider.dart'; 
 import 'package:layout/layout.dart';
 import 'package:portfolio/route/routes.dart';
 import 'package:portfolio/utils/custom_scroll_behaviour.dart';
-import 'package:portfolio/utils/extensions/theme_ex.dart';
 
 void main() async {
-  runApp(const MainApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ThemeProvider(),
+      child: const MainApp(),
+    ),
+  );
+    
 }
 
 class MainApp extends StatelessWidget {
@@ -15,10 +22,10 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Layout(
       child: MaterialApp(
-        title: 'Pascal Dohle Portfolio',
+        title: '☁️Pascal Dohle - Portfolio☁️',
         scrollBehavior: AppScrollBehavior(),
         debugShowCheckedModeBanner: false,
-        theme: context.theme(),
+        theme: Provider.of<ThemeProvider>(context).themeData,
         initialRoute: initialRoute,
         onGenerateRoute: RouteGen.generateRoute,
       ),

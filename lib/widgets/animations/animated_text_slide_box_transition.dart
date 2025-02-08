@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/utils/extensions/extensions.dart';
 import 'animated_slide_box.dart';
 
-/// credit to [https://davidcobbina.com] for his amazing artwork 👏🏻👏🏻
-/// I love this animation so much
 class AnimatedTextSlideBoxTransition extends StatefulWidget {
   const AnimatedTextSlideBoxTransition({
     super.key,

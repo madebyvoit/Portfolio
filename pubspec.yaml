@@ -15,6 +15,7 @@ dependencies:
   google_fonts: ^6.2.1
   intl: ^0.20.1
   layout: ^1.0.5
+  provider: ^6.1.2
   type_text: ^1.0.5
   url_launcher: ^6.3.1
   visibility_detector: ^0.4.0+2

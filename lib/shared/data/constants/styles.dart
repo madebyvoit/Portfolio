@@ -31,11 +31,25 @@ class CustomStyle {
 
   static TextStyle lora({
     final Color color = Colors.white,
-    FontWeight fontWeight = FontWeight.w600,
+    FontWeight fontWeight = FontWeight.w100,
     double fontSize = 14,
     FontStyle fontStyle = FontStyle.normal,
   }) {
     return GoogleFonts.lora(
+      color: color,
+      fontSize: fontSize,
+      fontWeight: fontWeight,
+      fontStyle: fontStyle,
+    );
+  }
+
+  static TextStyle mono({
+    final Color color = Colors.white,
+    FontWeight fontWeight = FontWeight.w300,
+    double fontSize = 14,
+    FontStyle fontStyle = FontStyle.normal,
+  }) {
+    return GoogleFonts.jetBrainsMono(
       color: color,
       fontSize: fontSize,
       fontWeight: fontWeight,

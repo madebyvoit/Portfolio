@@ -2,6 +2,7 @@ import 'package:go_router/go_router.dart';
 import 'package:portfolio/views/aboutme/about_me.dart';
 import 'package:portfolio/views/errorpage/errorpage.dart';
 import 'package:portfolio/views/homepage/homepage.dart';
+import 'package:portfolio/views/message_me/message_me.dart';
 import 'package:portfolio/views/projects/projects_page.dart';
 import 'package:portfolio/views/projects/subviews/project1/Project1.dart';
 
@@ -13,10 +14,6 @@ final router = GoRouter(
     GoRoute(
       path: '/',
       builder: (context, state) => Homepage(),
-    ),
-    GoRoute(
-      path: '/aboutme',
-      builder: (context, state) => AboutMe(),
     ),
     GoRoute(
       path: '/projects',
@@ -31,6 +28,14 @@ final router = GoRouter(
               return Project1();
             }),
       ],
+    ),
+    GoRoute(
+      path: '/aboutme',
+      builder: (context, state) => AboutMe(),
+    ),
+    GoRoute(
+      path: '/messageme',
+      builder: (context, state) => MessageMe(),
     ),
   ],
 );

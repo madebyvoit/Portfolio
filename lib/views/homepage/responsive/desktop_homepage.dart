@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/shared/utilities/functions/theme/theme_provider.dart';
-import 'package:provider/provider.dart';
+import 'package:portfolio/modules/footer/footer.dart';
+import 'package:portfolio/modules/homepage/homepage_hero/desktop_homepage_hero.dart';
+import 'package:portfolio/modules/homepage/homepage_thankyou/thank_you.dart';
+import 'package:portfolio/modules/homepage/homepage_timeline/desktop_timeline.dart';
+import 'package:portfolio/modules/navigation_bar/desktop_navbar/desktop_navbar.dart';
 
 class DesktopHomepage extends StatefulWidget {
   const DesktopHomepage({super.key});
@@ -14,36 +17,17 @@ class _DesktopHomepageState extends State<DesktopHomepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
-      body: Center(
-        child: Container(
-          decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.primary,
-            borderRadius: BorderRadius.circular(8),
-          ),
-          width: 200,
-          height: 200,
-          padding: const EdgeInsets.all(50),
-          child: GestureDetector(
-            onTap: () {
-              Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
-            },
-            child: Container(
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.primaryContainer,
-                borderRadius: BorderRadius.circular(8),
-              ),
-              padding: const EdgeInsets.all(25),
-              child: Center(
-                child: Text(
-                  "Switch Mode",
-                  style: TextStyle(
-                      color: Theme.of(context).colorScheme.onPrimaryContainer),
-                ),
-              ),
-            ),
-          ),
+      body: DesktopNavbar(
+          webBody: SingleChildScrollView(
+        child: Column(
+          children: [
+            DesktopHomepageHero(),
+            DesktopTimeline(),
+            ThankYou(),
+            Footer(),
+          ],
         ),
-      ),
+      )),
     );
   }
 }

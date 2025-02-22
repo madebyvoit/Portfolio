@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/modules/homepage_timeline/models/timeline_event_card.dart';
+import 'package:portfolio/modules/homepage/homepage_timeline/models/timeline_event_card.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
-class DesktopTimelineStartTile extends StatelessWidget {
+class DesktopTimelineEndTile extends StatelessWidget {
   final bool isFirst;
   final bool isLast;
   final bool isPast;
-  final Widget eventCard;
-  const DesktopTimelineStartTile({
+  final bool isEducation;
+  final Text eventCardHeader;
+  final Text eventCardText;
+  const DesktopTimelineEndTile({
     super.key,
     required this.isFirst,
     required this.isLast,
     required this.isPast,
-    required this.eventCard,
+    required this.eventCardHeader,
+    required this.eventCardText, required this.isEducation,
   });
 
   @override
@@ -21,9 +24,9 @@ class DesktopTimelineStartTile extends StatelessWidget {
       // SizedBox creates larger gaps between the event points
       height: 150,
       child: TimelineTile(
+        alignment: TimelineAlign.center,
         isFirst: isFirst,
         isLast: isLast,
-
         //line decoration
         beforeLineStyle: LineStyle(
           color: isPast
@@ -44,9 +47,12 @@ class DesktopTimelineStartTile extends StatelessWidget {
                 : Theme.of(context).colorScheme.primaryContainer,
           ),
         ),
-        startChild: TimelineEventCard(
+        endChild: TimelineEventCard(
           isPast: isPast,
-          child: eventCard,
+          isEducation: isEducation,
+          alignment: Alignment.centerLeft,
+          eventcardHeader: eventCardHeader,
+          eventcardText: eventCardText,
         ),
       ),
     );

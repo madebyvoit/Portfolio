@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/modules/homepage_timeline/models/timeline_event_card.dart';
+import 'package:portfolio/modules/homepage/homepage_timeline/models/timeline_event_card.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
 class MobileTimelineTile extends StatelessWidget {
   final bool isFirst;
   final bool isLast;
   final bool isPast;
-  final Widget eventCard;
+  final bool isEducation;
+  final Text eventCardHeader;
+  final Text eventCardText;
   const MobileTimelineTile({
     super.key,
     required this.isFirst,
     required this.isLast,
-    required this.isPast, required this.eventCard,
+    required this.isPast,
+    required this.eventCardHeader,
+    required this.eventCardText,
+    required this.isEducation,
   });
 
   @override
@@ -47,7 +52,10 @@ class MobileTimelineTile extends StatelessWidget {
         //card next to event
         endChild: TimelineEventCard(
           isPast: isPast,
-          child: eventCard,
+          isEducation: isEducation,
+          alignment: Alignment.centerLeft,
+          eventcardHeader: eventCardHeader,
+          eventcardText: eventCardText,
         ),
       ),
     );

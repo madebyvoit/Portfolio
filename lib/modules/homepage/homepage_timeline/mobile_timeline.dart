@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/modules/homepage_timeline/models/mobile_timeline_tile.dart';
-import 'package:portfolio/shared/data/constants.dart';
+import 'package:portfolio/modules/homepage/homepage_timeline/models/mobile_timeline_tile.dart';
 
 class MobileTimeline extends StatelessWidget {
   const MobileTimeline({super.key});
@@ -13,32 +12,36 @@ class MobileTimeline extends StatelessWidget {
         child: ListView(
           children: [
             MobileTimelineTile(
+              isEducation: false,
               isFirst: true,
               isLast: false,
               isPast: true,
-              eventCard: Text("OrderPlaced"),
+              eventCardHeader: Text('This is Data'),
+              eventCardText: Text('this is such wonderful Data'),
             ),
             MobileTimelineTile(
+              isEducation: false,
               isFirst: false,
               isLast: false,
               isPast: true,
-              eventCard: Text(
-                "OrderPlaced",
-                style: CustomStyle.mavenpro(
-                    color: Theme.of(context).colorScheme.onPrimary),
-              ),
+              eventCardHeader: Text('This is Data'),
+              eventCardText: Text('this is such wonderful Data'),
             ),
             MobileTimelineTile(
+              isEducation: false,
               isFirst: false,
               isLast: false,
               isPast: true,
-              eventCard: Text("OrderPlaced"),
+              eventCardHeader: Text('This is Data'),
+              eventCardText: Text('this is such wonderful Data'),
             ),
             MobileTimelineTile(
+              isEducation: false,
               isFirst: false,
               isLast: true,
               isPast: false,
-              eventCard: Text("OrderPlaced"),
+              eventCardHeader: Text('This is Data'),
+              eventCardText: Text('this is such wonderful Data'),
             ),
           ],
         ),

@@ -5,12 +5,13 @@ import 'package:portfolio/views/homepage/responsive/mobile_homepage.dart';
 import 'package:portfolio/views/homepage/responsive/tablet_homepage.dart';
 
 class Homepage extends StatelessWidget {
+  final int pageIndex = 0;
   const Homepage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ResponsiveLayout(
-      mobileScaffold: MobileHomepage(),
+      mobileScaffold: MobileHomepage(pageIndex: pageIndex),
       tabletScaffold: TabletHomepage(),
       desktopScaffold: DesktopHomepage(),
     );

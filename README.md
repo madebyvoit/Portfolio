@@ -5,19 +5,19 @@
 
 # Project Overview
 
-Welcome to my Game Design and Development Portfolio created with the Flutter Framework! This repository serves as a comprehensive showcase of my skills, creativity, and passion for game development and design prozesses. As a dedicated game developer, I have crafted a diverse collection of projects that highlight my proficiency in various aspects of the game development lifecycle.☁️
+Welcome to my Game Design and Development Portfolio created with the Flutter Framework 🗂️! This repository serves as a comprehensive showcase of my skills, creativity, and passion for game development and design prozesses. As a dedicated game developer, I have crafted a diverse collection of projects that highlight my proficiency in various aspects of the game development lifecycle. ☁️
 
 ### Build With
 This project was build using the flutter framework.
 
 ### Coming soon
 
-- Dark and light mode toggle
+- Dark and light mode toggle 🌘
 - 3D elements
-- Case studies
-- Multilingual support
-- Interactive timeline of my career and planned future
-- Easter eggs
+- Case studies 📜
+- Multilingual support 🌐
+- Interactive timeline of my career and planned future ⌛
+- Easter eggs 🥚
 
 ## About Me
 

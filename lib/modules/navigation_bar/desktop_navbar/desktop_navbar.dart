@@ -21,8 +21,9 @@ class DesktopNavbar extends StatelessWidget implements PreferredSizeWidget {
               color: Theme.of(context).colorScheme.onSurface,
             ),
           ),
-          leading:
-              IconButton(onPressed: () {}, icon: Icon(Icons.vaccines_outlined)),
+          leading: IconButton(
+              onPressed: () {},
+              icon: Image.asset('assets/images/signature/signature_white.png')),
           actions: [
             TextButton(
               onPressed: () {},

@@ -37,7 +37,19 @@ class ProjectsRightPanel extends StatelessWidget {
                   angle: -10 * math.pi / 180,
                   child: ProjectPolaroid(),
                 ),
-              )
+              ),
+              Positioned(
+                top: 300,
+                left: 400,
+                child: Container(
+                  height: 30,
+                  width: 30,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    color: Colors.red, //#TODO Change Color to responsive color
+                  ),
+                ),
+              ),
             ],
           ),
         ],

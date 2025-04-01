@@ -28,7 +28,7 @@ class ProjectPolaroid extends StatelessWidget {
                 color: Theme.of(context).colorScheme.secondary,
               ),
             ),
-          )
+          ),
         ],
       ),
     );

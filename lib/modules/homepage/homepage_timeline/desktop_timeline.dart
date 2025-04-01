@@ -37,11 +37,11 @@ class DesktopTimeline extends StatelessWidget {
                     isPast: true,
                     isEducation: true,
                     eventCardHeader: Text(
-                      'Jun 2021',
+                      'once opon a time - Jun 2021',
                       style: CustomStyle.mavenpro(),
                     ),
                     eventCardText: Text(
-                      'Theodor Heuss Gymnasium\ngraduated high school',
+                      'High School Graduation\nTheodor Heuss Gymnasium',
                       style: CustomStyle.mono(),
                     ),
                   ),
@@ -95,11 +95,11 @@ class DesktopTimeline extends StatelessWidget {
                 isPast: true,
                 isEducation: true,
                 eventCardHeader: Text(
-                  'Mar 2025',
+                  'Mar 2025 - NOW',
                   style: CustomStyle.mavenpro(),
                 ),
                 eventCardText: Text(
-                  'Cyber Security Course\naci learning',
+                  'Freelancer\nEngraved Studios',
                   style: CustomStyle.mono(),
                 ),
               ),
@@ -109,11 +109,11 @@ class DesktopTimeline extends StatelessWidget {
                 isPast: false,
                 isEducation: false,
                 eventCardHeader: Text(
-                  'Mar 2025 - NOW',
+                  'coming Jun 2025',
                   style: CustomStyle.mavenpro(),
                 ),
                 eventCardText: Text(
-                  'Freelancer',
+                  'System Administrator\nZoll',
                   style: CustomStyle.mono(),
                 ),
               ),

@@ -40,6 +40,7 @@ dependencies:
   google_fonts: ^6.2.1
   timeline_tile: ^2.0.0
   dotted_line: ^3.2.3
+  web_smooth_scroll: ^2.0.0
 
 dev_dependencies:
   flutter_test:

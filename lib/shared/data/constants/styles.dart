@@ -45,11 +45,25 @@ class CustomStyle {
 
   static TextStyle mono({
     final Color color = Colors.white,
-    FontWeight fontWeight = FontWeight.w300,
-    double fontSize = 14,
+    FontWeight fontWeight = FontWeight.w400,
+    double fontSize = 16,
     FontStyle fontStyle = FontStyle.normal,
   }) {
     return GoogleFonts.jetBrainsMono(
+      color: color,
+      fontSize: fontSize,
+      fontWeight: fontWeight,
+      fontStyle: fontStyle,
+    );
+  }
+
+  static TextStyle inter({
+    final Color color = Colors.white,
+    FontWeight fontWeight = FontWeight.w300,
+    double fontSize = 12,
+    FontStyle fontStyle = FontStyle.normal,
+  }) {
+    return GoogleFonts.inter(
       color: color,
       fontSize: fontSize,
       fontWeight: fontWeight,

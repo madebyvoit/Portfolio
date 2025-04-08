@@ -8,21 +8,24 @@ class DesktopTimelineEndTile extends StatelessWidget {
   final bool isPast;
   final bool isEducation;
   final Text eventCardHeader;
-  final Text eventCardText;
+  final Text eventCardAttribute;
+  final Text eventCardSubTitle;
   const DesktopTimelineEndTile({
     super.key,
     required this.isFirst,
     required this.isLast,
     required this.isPast,
     required this.eventCardHeader,
-    required this.eventCardText, required this.isEducation,
+    required this.isEducation,
+    required this.eventCardAttribute,
+    required this.eventCardSubTitle,
   });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       // SizedBox creates larger gaps between the event points
-      height: 150,
+      height: 180,
       child: TimelineTile(
         alignment: TimelineAlign.center,
         isFirst: isFirst,
@@ -36,7 +39,7 @@ class DesktopTimelineEndTile extends StatelessWidget {
 
         //decorate the icon
         indicatorStyle: IndicatorStyle(
-          width: 40,
+          width: isPast ? 40 : 20,
           color: isPast
               ? Theme.of(context).colorScheme.primary
               : Theme.of(context).colorScheme.primaryContainer,
@@ -52,7 +55,8 @@ class DesktopTimelineEndTile extends StatelessWidget {
           isEducation: isEducation,
           alignment: Alignment.centerLeft,
           eventcardHeader: eventCardHeader,
-          eventcardText: eventCardText,
+          eventcardAttribute: eventCardAttribute,
+          eventcardSubTitle: eventCardSubTitle,
         ),
       ),
     );

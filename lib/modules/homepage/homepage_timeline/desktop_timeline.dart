@@ -21,7 +21,7 @@ class DesktopTimeline extends StatelessWidget {
                 children: [
                   Container(
                     alignment: Alignment.center,
-                    height: 50,
+                    height: 80,
                     child: DottedLine(
                       lineThickness: 4,
                       dashColor: Theme.of(context).colorScheme.primary,
@@ -31,34 +31,60 @@ class DesktopTimeline extends StatelessWidget {
                       dashRadius: 10,
                     ),
                   ),
-                  DesktopTimelineEndTile(
+                  DesktopTimelineStartTile(
                     isFirst: true,
                     isLast: false,
                     isPast: true,
                     isEducation: true,
                     eventCardHeader: Text(
-                      'once opon a time - Jun 2021',
+                      HomepageStrings.firstTimelineTitle,
                       style: CustomStyle.mavenpro(),
                     ),
-                    eventCardText: Text(
-                      'High School Graduation\nTheodor Heuss Gymnasium',
+                    eventCardAttribute: Text(
+                      HomepageStrings.firstTimelineAttribute,
                       style: CustomStyle.mono(),
                     ),
-                  ),
+                    eventCardSubTitle: Text(
+                      HomepageStrings.firstTimelineSubtitle,
+                      style: CustomStyle.inter(),
+                    ),
+                  )
                 ],
               ),
+              DesktopTimelineEndTile(
+                isFirst: false,
+                isLast: false,
+                isPast: true,
+                isEducation: true,
+                eventCardHeader: Text(
+                  HomepageStrings.secondTimelineTitle,
+                  style: CustomStyle.mavenpro(),
+                ),
+                eventCardAttribute: Text(
+                  HomepageStrings.secondTimelineAttribute,
+                  style: CustomStyle.mono(),
+                ),
+                eventCardSubTitle: Text(
+                  HomepageStrings.secondTimelineSubtitle,
+                  style: CustomStyle.inter(),
+                ),
+              ),
               DesktopTimelineStartTile(
                 isFirst: false,
                 isLast: false,
                 isPast: true,
-                isEducation: false,
+                isEducation: true,
                 eventCardHeader: Text(
-                  'Mar 2022 - Mar 2024',
+                  HomepageStrings.thirdTimelineTitle,
                   style: CustomStyle.mavenpro(),
                 ),
-                eventCardText: Text(
-                  'Working Student\nIngenierbüro Dörr',
-                  style: CustomStyle.lora(),
+                eventCardAttribute: Text(
+                  HomepageStrings.thirdTimelineAttribute,
+                  style: CustomStyle.mono(),
+                ),
+                eventCardSubTitle: Text(
+                  HomepageStrings.thirdTimelineSubtitle,
+                  style: CustomStyle.inter(),
                 ),
               ),
               DesktopTimelineEndTile(
@@ -67,54 +93,52 @@ class DesktopTimeline extends StatelessWidget {
                 isPast: true,
                 isEducation: true,
                 eventCardHeader: Text(
-                  'Mar 2024 - Okt 2024',
+                  HomepageStrings.fourthTimelineTitle,
                   style: CustomStyle.mavenpro(),
                 ),
-                eventCardText: Text(
-                  'Internship\nTechnical Artist and Game Developer',
-                  style: CustomStyle.lora(),
+                eventCardAttribute: Text(
+                  HomepageStrings.fourthTimelineAttribute,
+                  style: CustomStyle.mono(),
+                ),
+                eventCardSubTitle: Text(
+                  HomepageStrings.fourthTimelineSubtitle,
+                  style: CustomStyle.inter(),
                 ),
               ),
               DesktopTimelineStartTile(
-                isFirst: false,
-                isLast: false,
-                isPast: true,
-                isEducation: false,
-                eventCardHeader: Text(
-                  'Okt 2021 - Mar 2025',
-                  style: CustomStyle.mavenpro(),
-                ),
-                eventCardText: Text(
-                  'Bachelor of Arts\nGame Desing and Development',
-                  style: CustomStyle.mono(),
-                ),
-              ),
-              DesktopTimelineEndTile(
                 isFirst: false,
                 isLast: false,
                 isPast: true,
                 isEducation: true,
                 eventCardHeader: Text(
-                  'Mar 2025 - NOW',
+                  HomepageStrings.fifthTimelineTitle,
                   style: CustomStyle.mavenpro(),
                 ),
-                eventCardText: Text(
-                  'Freelancer\nEngraved Studios',
+                eventCardAttribute: Text(
+                  HomepageStrings.fifthTimelineAttribute,
                   style: CustomStyle.mono(),
                 ),
+                eventCardSubTitle: Text(
+                  HomepageStrings.fifthTimelineSubtitle,
+                  style: CustomStyle.inter(),
+                ),
               ),
-              DesktopTimelineStartTile(
+              DesktopTimelineEndTile(
                 isFirst: false,
                 isLast: true,
                 isPast: false,
-                isEducation: false,
+                isEducation: true,
                 eventCardHeader: Text(
-                  'coming Jun 2025',
+                  HomepageStrings.sixthTimelineTitle,
                   style: CustomStyle.mavenpro(),
                 ),
-                eventCardText: Text(
-                  'System Administrator\nZoll',
+                eventCardAttribute: Text(
+                  HomepageStrings.sixthTimelineAttribute,
                   style: CustomStyle.mono(),
+                ),
+                eventCardSubTitle: Text(
+                  HomepageStrings.sixthTimelineSubtitle,
+                  style: CustomStyle.inter(),
                 ),
               ),
               SizedBox(height: 150)

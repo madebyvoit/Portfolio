@@ -8,15 +8,15 @@ class MobileTimelineTile extends StatelessWidget {
   final bool isPast;
   final bool isEducation;
   final Text eventCardHeader;
-  final Text eventCardText;
+  final Text eventCardAttribute;
+  final Text eventCardSubTitle;
   const MobileTimelineTile({
     super.key,
     required this.isFirst,
     required this.isLast,
     required this.isPast,
     required this.eventCardHeader,
-    required this.eventCardText,
-    required this.isEducation,
+    required this.isEducation, required this.eventCardAttribute, required this.eventCardSubTitle,
   });
 
   @override
@@ -55,7 +55,8 @@ class MobileTimelineTile extends StatelessWidget {
           isEducation: isEducation,
           alignment: Alignment.centerLeft,
           eventcardHeader: eventCardHeader,
-          eventcardText: eventCardText,
+          eventcardAttribute: eventCardAttribute,
+          eventcardSubTitle: eventCardSubTitle,
         ),
       ),
     );

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/modules/footer/desktop_footer.dart';
+import 'package:portfolio/modules/homepage/homepage_aboutme/desktop_homepage_aboutme.dart';
+import 'package:portfolio/modules/homepage/homepage_engraved/desktop_homepage_engraved.dart';
 import 'package:portfolio/modules/homepage/homepage_hero/desktop_homepage_hero.dart';
 import 'package:portfolio/modules/homepage/homepage_projects/desktop_homepage_projects.dart';
 import 'package:portfolio/modules/homepage/homepage_thankyou/thank_you.dart';
@@ -23,8 +25,10 @@ class _DesktopHomepageState extends State<DesktopHomepage> {
         child: Column(
           children: [
             DesktopHomepageHero(),
+            DesktopHomepageAboutme(),
             DesktopTimeline(),
             DesktopHomepageProjects(),
+            DesktopHomepageEngraved(),
             ThankYou(),
             DesktopFooter(),
           ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/shared/data/constants.dart';
 
+
 class DesktopNavbar extends StatelessWidget implements PreferredSizeWidget {
   final Widget webBody;
   const DesktopNavbar({super.key, required this.webBody});
@@ -8,10 +9,11 @@ class DesktopNavbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return NestedScrollView(
-      headerSliverBuilder: (context, innerBoxScrolled) => [
+      headerSliverBuilder: (context, bool innerBoxScrolled) => [
         SliverAppBar(
           backgroundColor: Theme.of(context).colorScheme.surface,
           floating: true,
+          pinned: false,
           snap: true,
           elevation: 0,
           title: Text(
@@ -22,8 +24,12 @@ class DesktopNavbar extends StatelessWidget implements PreferredSizeWidget {
             ),
           ),
           leading: IconButton(
-              onPressed: () {},
-              icon: Image.asset('assets/images/signature/signature_white.png')),
+            onPressed: () {},
+            icon: Image.asset(
+              'assets/images/signature/signature_white.png',
+              filterQuality: FilterQuality.high,
+            ),
+          ),
           actions: [
             TextButton(
               onPressed: () {},

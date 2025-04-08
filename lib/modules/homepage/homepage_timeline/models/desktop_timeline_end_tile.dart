@@ -8,22 +8,22 @@ class DesktopTimelineStartTile extends StatelessWidget {
   final bool isPast;
   final bool isEducation;
   final Text eventCardHeader;
-  final Text eventCardText;
+  final Text eventCardAttribute;
+  final Text eventCardSubTitle;
   const DesktopTimelineStartTile({
     super.key,
     required this.isFirst,
     required this.isLast,
     required this.isPast,
     required this.eventCardHeader,
-    required this.eventCardText,
-    required this.isEducation,
+    required this.isEducation, required this.eventCardAttribute, required this.eventCardSubTitle,
   });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       // SizedBox creates larger gaps between the event points
-      height: 150,
+      height: 180,
       child: TimelineTile(
         alignment: TimelineAlign.center,
         isFirst: isFirst,
@@ -54,7 +54,8 @@ class DesktopTimelineStartTile extends StatelessWidget {
           isEducation: isEducation,
           alignment: Alignment.centerRight,
           eventcardHeader: eventCardHeader,
-          eventcardText: eventCardText,
+          eventcardAttribute: eventCardAttribute,
+          eventcardSubTitle: eventCardSubTitle,
         ),
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/modules/homepage/homepage_timeline/models/mobile_timeline_tile.dart';
+import 'package:portfolio/shared/data/constants.dart';
 
 class MobileTimeline extends StatelessWidget {
   const MobileTimeline({super.key});
@@ -17,31 +18,59 @@ class MobileTimeline extends StatelessWidget {
               isLast: false,
               isPast: true,
               eventCardHeader: Text('This is Data'),
-              eventCardText: Text('this is such wonderful Data'),
+              eventCardAttribute: Text(
+                'High School Graduation\nTheodor Heuss Gymnasium',
+                style: CustomStyle.mono(),
+              ),
+              eventCardSubTitle: Text(
+                'High School Graduation\nTheodor Heuss Gymnasium',
+                style: CustomStyle.inter(),
+              ),
             ),
             MobileTimelineTile(
               isEducation: false,
-              isFirst: false,
+              isFirst: true,
               isLast: false,
               isPast: true,
               eventCardHeader: Text('This is Data'),
-              eventCardText: Text('this is such wonderful Data'),
+              eventCardAttribute: Text(
+                'High School Graduation\nTheodor Heuss Gymnasium',
+                style: CustomStyle.mono(),
+              ),
+              eventCardSubTitle: Text(
+                'High School Graduation\nTheodor Heuss Gymnasium',
+                style: CustomStyle.inter(),
+              ),
             ),
             MobileTimelineTile(
               isEducation: false,
-              isFirst: false,
+              isFirst: true,
               isLast: false,
               isPast: true,
               eventCardHeader: Text('This is Data'),
-              eventCardText: Text('this is such wonderful Data'),
+              eventCardAttribute: Text(
+                'High School Graduation\nTheodor Heuss Gymnasium',
+                style: CustomStyle.mono(),
+              ),
+              eventCardSubTitle: Text(
+                'High School Graduation\nTheodor Heuss Gymnasium',
+                style: CustomStyle.inter(),
+              ),
             ),
             MobileTimelineTile(
               isEducation: false,
-              isFirst: false,
-              isLast: true,
-              isPast: false,
+              isFirst: true,
+              isLast: false,
+              isPast: true,
               eventCardHeader: Text('This is Data'),
-              eventCardText: Text('this is such wonderful Data'),
+              eventCardAttribute: Text(
+                'High School Graduation\nTheodor Heuss Gymnasium',
+                style: CustomStyle.mono(),
+              ),
+              eventCardSubTitle: Text(
+                'High School Graduation\nTheodor Heuss Gymnasium',
+                style: CustomStyle.inter(),
+              ),
             ),
           ],
         ),

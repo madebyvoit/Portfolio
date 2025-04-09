@@ -7,6 +7,19 @@ class DesktopNavbar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    ButtonStyle buttonStyle = ButtonStyle(
+      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+        RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(18.0),
+          
+          side: BorderSide(
+            width: 2.0,
+            color: Theme.of(context).colorScheme.primary,
+          ),
+        ),
+      ),
+    );
+
     return NestedScrollView(
       headerSliverBuilder: (context, bool innerBoxScrolled) => [
         SliverAppBar(
@@ -32,26 +45,7 @@ class DesktopNavbar extends StatelessWidget implements PreferredSizeWidget {
           actions: [
             TextButton(
               onPressed: () {},
-              child: Text(
-                'Portfolio',
-                style: CustomStyle.mavenpro(
-                  fontSize: 20,
-                  color: Theme.of(context).colorScheme.onSurface,
-                ),
-              ),
-            ),
-            TextButton(
-              onPressed: () {},
-              child: Text(
-                'Projects',
-                style: CustomStyle.mavenpro(
-                  fontSize: 20,
-                  color: Theme.of(context).colorScheme.onSurface,
-                ),
-              ),
-            ),
-            TextButton(
-              onPressed: () {},
+              style: buttonStyle,
               child: Text(
                 'About Me',
                 style: CustomStyle.mavenpro(
@@ -60,8 +54,34 @@ class DesktopNavbar extends StatelessWidget implements PreferredSizeWidget {
                 ),
               ),
             ),
+            SizedBox(width: 5),
             TextButton(
               onPressed: () {},
+              style: buttonStyle,
+              child: Text(
+                'Experience',
+                style: CustomStyle.mavenpro(
+                  fontSize: 20,
+                  color: Theme.of(context).colorScheme.onSurface,
+                ),
+              ),
+            ),
+            SizedBox(width: 5),
+            TextButton(
+              onPressed: () {},
+              style: buttonStyle,
+              child: Text(
+                'Projects',
+                style: CustomStyle.mavenpro(
+                  fontSize: 20,
+                  color: Theme.of(context).colorScheme.onSurface,
+                ),
+              ),
+            ),
+            SizedBox(width: 5),
+            TextButton(
+              onPressed: () {},
+              style: buttonStyle,
               child: Text(
                 'Contact',
                 style: CustomStyle.mavenpro(
@@ -70,6 +90,7 @@ class DesktopNavbar extends StatelessWidget implements PreferredSizeWidget {
                 ),
               ),
             ),
+            SizedBox(width: 5),
             TextButton(
               onPressed: () {},
               style: ButtonStyle(

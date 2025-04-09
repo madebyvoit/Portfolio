@@ -52,7 +52,7 @@ class TimelineEventCard extends StatelessWidget {
               top: 10,
               right: 15,
               child: Transform.rotate(
-                angle: (random.nextInt(30) + 10) * pi / 180,
+                angle: (random.nextInt(45) * pi) / 180,
                 child: Container(
                   height: 40,
                   width: 40,

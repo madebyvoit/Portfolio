@@ -7,6 +7,7 @@ import 'package:portfolio/modules/homepage/homepage_projects/desktop_homepage_pr
 import 'package:portfolio/modules/homepage/homepage_thankyou/thank_you.dart';
 import 'package:portfolio/modules/homepage/homepage_timeline/desktop_timeline.dart';
 import 'package:portfolio/modules/navigation_bar/desktop_navbar/desktop_navbar.dart';
+import 'package:portfolio/shared/utilities/splashscreen/splash_screen.dart';
 
 class DesktopHomepage extends StatefulWidget {
   const DesktopHomepage({super.key});
@@ -20,20 +21,26 @@ class _DesktopHomepageState extends State<DesktopHomepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
-      body: DesktopNavbar(
+      body: SplashScreen(
+        name: "Pascal Dohle",
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        loadingBarColor: Theme.of(context).colorScheme.onSurface,
+        child: DesktopNavbar(
           webBody: SingleChildScrollView(
-        child: Column(
-          children: [
-            DesktopHomepageHero(),
-            DesktopHomepageAboutme(),
-            DesktopTimeline(),
-            DesktopHomepageProjects(),
-            DesktopHomepageEngraved(),
-            ThankYou(),
-            DesktopFooter(),
-          ],
+            child: Column(
+              children: [
+                DesktopHomepageHero(),
+                DesktopHomepageAboutme(),
+                DesktopTimeline(),
+                DesktopHomepageProjects(),
+                DesktopHomepageEngraved(),
+                ThankYou(),
+                DesktopFooter(),
+              ],
+            ),
+          ),
         ),
-      )),
+      ),
     );
   }
 }

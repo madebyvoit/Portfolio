@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/shared/data/constants.dart';
 
-
 class DesktopNavbar extends StatelessWidget implements PreferredSizeWidget {
   final Widget webBody;
   const DesktopNavbar({super.key, required this.webBody});
@@ -42,32 +41,50 @@ class DesktopNavbar extends StatelessWidget implements PreferredSizeWidget {
               ),
             ),
             TextButton(
-                onPressed: () {},
-                child: Text(
-                  'Projects',
-                  style: CustomStyle.mavenpro(
-                    fontSize: 20,
-                    color: Theme.of(context).colorScheme.onSurface,
-                  ),
-                )),
+              onPressed: () {},
+              child: Text(
+                'Projects',
+                style: CustomStyle.mavenpro(
+                  fontSize: 20,
+                  color: Theme.of(context).colorScheme.onSurface,
+                ),
+              ),
+            ),
             TextButton(
-                onPressed: () {},
-                child: Text(
-                  'About Me',
-                  style: CustomStyle.mavenpro(
-                    fontSize: 20,
-                    color: Theme.of(context).colorScheme.onSurface,
-                  ),
-                )),
+              onPressed: () {},
+              child: Text(
+                'About Me',
+                style: CustomStyle.mavenpro(
+                  fontSize: 20,
+                  color: Theme.of(context).colorScheme.onSurface,
+                ),
+              ),
+            ),
             TextButton(
-                onPressed: () {},
-                child: Text(
-                  'Contact',
-                  style: CustomStyle.mavenpro(
-                    fontSize: 20,
-                    color: Theme.of(context).colorScheme.onSurface,
-                  ),
-                )),
+              onPressed: () {},
+              child: Text(
+                'Contact',
+                style: CustomStyle.mavenpro(
+                  fontSize: 20,
+                  color: Theme.of(context).colorScheme.onSurface,
+                ),
+              ),
+            ),
+            TextButton(
+              onPressed: () {},
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all<Color>(
+                  Theme.of(context).colorScheme.primary,
+                ),
+              ),
+              child: Text(
+                'Blog',
+                style: CustomStyle.mavenpro(
+                  fontSize: 20,
+                  color: Theme.of(context).colorScheme.onSurface,
+                ),
+              ),
+            ),
             SizedBox(width: 50)
           ],
         )

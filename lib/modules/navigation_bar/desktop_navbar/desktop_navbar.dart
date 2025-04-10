@@ -11,9 +11,8 @@ class DesktopNavbar extends StatelessWidget implements PreferredSizeWidget {
       shape: WidgetStateProperty.all<RoundedRectangleBorder>(
         RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(18.0),
-          
           side: BorderSide(
-            width: 2.0,
+            width: 3.0,
             color: Theme.of(context).colorScheme.primary,
           ),
         ),
@@ -46,11 +45,14 @@ class DesktopNavbar extends StatelessWidget implements PreferredSizeWidget {
             TextButton(
               onPressed: () {},
               style: buttonStyle,
-              child: Text(
-                'About Me',
-                style: CustomStyle.mavenpro(
-                  fontSize: 20,
-                  color: Theme.of(context).colorScheme.onSurface,
+              child: Container(
+                padding: const EdgeInsets.all(5),
+                child: Text(
+                  'About Me',
+                  style: CustomStyle.mavenpro(
+                    fontSize: 20,
+                    color: Theme.of(context).colorScheme.onSurface,
+                  ),
                 ),
               ),
             ),
@@ -58,11 +60,14 @@ class DesktopNavbar extends StatelessWidget implements PreferredSizeWidget {
             TextButton(
               onPressed: () {},
               style: buttonStyle,
-              child: Text(
-                'Experience',
-                style: CustomStyle.mavenpro(
-                  fontSize: 20,
-                  color: Theme.of(context).colorScheme.onSurface,
+              child: Container(
+                padding: const EdgeInsets.all(5),
+                child: Text(
+                  'Experience',
+                  style: CustomStyle.mavenpro(
+                    fontSize: 20,
+                    color: Theme.of(context).colorScheme.onSurface,
+                  ),
                 ),
               ),
             ),
@@ -70,11 +75,14 @@ class DesktopNavbar extends StatelessWidget implements PreferredSizeWidget {
             TextButton(
               onPressed: () {},
               style: buttonStyle,
-              child: Text(
-                'Projects',
-                style: CustomStyle.mavenpro(
-                  fontSize: 20,
-                  color: Theme.of(context).colorScheme.onSurface,
+              child: Container(
+                padding: const EdgeInsets.all(5),
+                child: Text(
+                  'Projects',
+                  style: CustomStyle.mavenpro(
+                    fontSize: 20,
+                    color: Theme.of(context).colorScheme.onSurface,
+                  ),
                 ),
               ),
             ),
@@ -82,11 +90,14 @@ class DesktopNavbar extends StatelessWidget implements PreferredSizeWidget {
             TextButton(
               onPressed: () {},
               style: buttonStyle,
-              child: Text(
-                'Contact',
-                style: CustomStyle.mavenpro(
-                  fontSize: 20,
-                  color: Theme.of(context).colorScheme.onSurface,
+              child: Container(
+                padding: const EdgeInsets.all(5),
+                child: Text(
+                  'Contact',
+                  style: CustomStyle.mavenpro(
+                    fontSize: 20,
+                    color: Theme.of(context).colorScheme.onSurface,
+                  ),
                 ),
               ),
             ),
@@ -98,11 +109,14 @@ class DesktopNavbar extends StatelessWidget implements PreferredSizeWidget {
                   Theme.of(context).colorScheme.primary,
                 ),
               ),
-              child: Text(
-                'Blog',
-                style: CustomStyle.mavenpro(
-                  fontSize: 20,
-                  color: Theme.of(context).colorScheme.onSurface,
+              child: Container(
+                padding: const EdgeInsets.all(5),
+                child: Text(
+                  'Blog',
+                  style: CustomStyle.mavenpro(
+                    fontSize: 20,
+                    color: Theme.of(context).colorScheme.onSurface,
+                  ),
                 ),
               ),
             ),

@@ -25,6 +25,7 @@ class DesktopHomepageAboutme extends StatelessWidget {
     // final screenSize = MediaQuery.of(context).size;
 
     return Container(
+
       padding: const EdgeInsets.symmetric(horizontal: 40.0, vertical: 60.0),
       // Constrain the width for better readability on very wide screens
       constraints: const BoxConstraints(maxWidth: 900),
@@ -48,7 +49,7 @@ class DesktopHomepageAboutme extends StatelessWidget {
           // Profile Picture
           CircleAvatar(
             radius: 80, // Adjust size as needed
-            backgroundColor: Colors.grey[300], // Fallback background color
+            backgroundColor: Theme.of(context).colorScheme.primary, // Fallback background color
             // Use AssetImage to load the image from your assets folder
             // It's good practice to handle potential loading errors,
             // but for simplicity, we assume the image exists.

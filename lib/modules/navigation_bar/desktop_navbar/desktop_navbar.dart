@@ -10,9 +10,9 @@ class DesktopNavbar extends StatelessWidget implements PreferredSizeWidget {
     ButtonStyle buttonStyle = ButtonStyle(
       shape: WidgetStateProperty.all<RoundedRectangleBorder>(
         RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(18.0),
+          borderRadius: BorderRadius.circular(20.0),
           side: BorderSide(
-            width: 3.0,
+            width: 2.0,
             color: Theme.of(context).colorScheme.primary,
           ),
         ),
@@ -22,7 +22,15 @@ class DesktopNavbar extends StatelessWidget implements PreferredSizeWidget {
     return NestedScrollView(
       headerSliverBuilder: (context, bool innerBoxScrolled) => [
         SliverAppBar(
-          backgroundColor: Theme.of(context).colorScheme.surface,
+          flexibleSpace: Container(
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color:
+                  Theme.of(context).colorScheme.surface.withValues(alpha: 0.8),
+              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20)),
+            ),
+          ),
+          backgroundColor: Colors.transparent,
           floating: true,
           pinned: false,
           snap: true,
